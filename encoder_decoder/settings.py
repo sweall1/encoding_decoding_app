@@ -25,25 +25,10 @@ SECRET_KEY = 'django-insecure-b+^1-tiqi#lywgr#++z(2v6stamt8$o#z0)!+b4kg-2(y&s2p2
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com']
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-        },
-    },
-}
 # Application definition
 
 INSTALLED_APPS = [
