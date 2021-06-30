@@ -60,12 +60,13 @@ class DecoderSerialzier(serializers.ModelSerializer):
                         word_list[x][-1] == key_word_list[y][-1] and\
                         len(word_list[x]) == len(key_word_list[y]):
 
-                    word_list[x] = key_word_list[y]
                     changed_word_count += 1
+                    word_list[x] = key_word_list[y]
+
                 #cheking if any given word matches the sentence
-            if changed_word_count == 0:
-                raise serializers.ValidationError(
-                    {'text': 'None of the given words matches'})
+        if changed_word_count == 0:
+            raise serializers.ValidationError(
+                {'text': 'None of the given words matches'})
         #adding data to string
         string_value = ''
         for ele in word_list:
