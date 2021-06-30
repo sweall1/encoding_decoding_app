@@ -12,12 +12,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import django_heroku
 from pathlib import Path
-from .secret_settings import *
+
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+SECRET_KEY = 'django-insecure-b+^1-tiqi#lywgr#++z(2v6stamt8$o#z0)!+b4kg-2(y&s2p2'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
