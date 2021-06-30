@@ -1,1 +1,0 @@
-web: gunicorn encoder_decoder.wsgi
