@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import Encoder, Decoder
 from .serializer import EncoderSerialzier, DecoderSerialzier
 from rest_framework import viewsets
